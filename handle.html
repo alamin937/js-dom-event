@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handler</title>
+</head>
+<body>
+    <p id='paragraph'></p>
+    <input id='text-id' type="text">
+    <button id='update-name'>Submit</button>
+    <button onclick="pera()">Click me for paragraph</button>
+    <button id='handler'>click me for handler</button>
+    <script>
+     function pera(){
+         const writePara = document.getElementById('paragraph');
+         writePara.innerText = 'get by paragrph'
+     }
+
+    //  direct addeventlistener
+
+    document.getElementById('handler').addEventListener('click', function(){
+        const pera = document.getElementById('paragraph');
+        pera.innerText = 'text me';
+    })
+
+
+    // input id
+
+    document.getElementById('update-name').addEventListener('click', function(){
+        const nameField = document.getElementById('text-id')
+
+        const getPera = document.getElementById('paragraph')
+        getPera.innerText = nameField.value;
+        nameField.value = '';
+    })
+    </script>
+</body>
+</html>

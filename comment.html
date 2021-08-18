@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment box</title>
+</head>
+<body>
+   <header>
+    <h1>Give your comment</h1>
+   </header>
+   <main>
+       <div id = 'comment-text'>
+           <p>Nevermore throws till beguiling said that the denser see here, above burned with the name my songs morrow nevermore. Me.</p>
+           <p>Nevermore throws till beguiling said that the denser see here, above burned with the name my songs morrow nevermore. Me.</p>
+           <p>Nevermore throws till beguiling said that the denser see here, above burned with the name my songs morrow nevermore. Me.</p>
+       </div>
+       <div>
+           <textarea name="" id="comment-area" cols="60" rows="5"></textarea><br>
+           <button id='post-button'>Post</button>
+       </div>
+   </main>
+   <script>
+       document.getElementById('post-button').addEventListener('click', function(){
+           const comment = document.getElementById('comment-area');
+
+        const newComment = document.createElement('p');
+        newComment.innerText = comment.value;
+
+        const commentTextNew = document.getElementById('comment-text');
+        commentTextNew.appendChild(newComment);
+
+        comment.value = '';
+       })
+   </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Handle event</title>
+</head>
+<body>
+    <h1>welcome to the event</h1>
+    <button onclick="changeColor()">Click me</button>
+    <button id='change-color'>click me</button>
+    <p id='paragraph'></p>
+    <input id='write-text' type="text"><br>
+    <button id='submit-all'>submit</button>
+    <br>
+    <br>
+    <br>
+    <h1>Comment Section</h1>
+    <section>
+      <div id='text-area'>
+        <p>Meaninglittle this name curious friends shore so, i feather what muttered ominous what seeming, my by no mefilled human no.</p>
+        <p>Meaninglittle this name curious friends shore so, i feather what muttered ominous what seeming, my by no mefilled human no.</p>
+        <p>Meaninglittle this name curious friends shore so, i feather what muttered ominous what seeming, my by no mefilled human no.</p>
+      </div>
+      <textarea name="" id="text-all" cols="60" rows="5"></textarea><br>
+      <button id='post-button'>post</button>
+    </section>
+    <script>
+        function changeColor(){
+            document.body.style.backgroundColor = 'yellow';
+
+        }
+
+        document.getElementById('change-color').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'red';
+        })
+
+        // input script
+
+        document.getElementById('submit-all').addEventListener('click', function(){
+            const text = document.getElementById('write-text');
+
+            const pera = document.getElementById('paragraph');
+            pera.innerText = text.value;
+
+            text.value = '';
+        })
+
+        // comment area js
+
+        document.getElementById('post-button').addEventListener('click', function(){
+            const comment = document.getElementById('text.all');
+
+            const createPera = document.createElement('p');
+            createPera.innerText = comment.value;
+
+            const commentBox = document.getElementById('text-area');
+            commentBox.appendChild(createPera);
+
+            comment.value = '';
+        })
+    </script>
+</body>
+</html>
